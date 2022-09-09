@@ -1,0 +1,43 @@
+<html>
+    <body bgcolor=#d4a3ae>
+        <style>
+            body {
+              background-image: url('https://thumbs.dreamstime.com/b/health-medical-insurance-life-whole-family-concept-practitioner-doctor-protective-gesture-icon-103341022.jpg');
+            }
+            </style>
+
+        <center>
+
+        <h1> MEDICAL INSURANCE  </h1><br>
+        
+        <form action="/predict_charges" method="POST", >
+           <b> age :  <input type="text", name='age', placeholder="enter age"> <br><br>
+           <b> sex :  <select name="sex"> <br><br>
+            <option value="male">male</option>
+            <option value="female">female</option>
+            </select> <br><br>
+           <b> bmi :  <input type="text", name='bmi', placeholder="20 to 40"> <br><br>
+           <b> children :  <input type="text", name='children', placeholder="1-3"> <br><br>
+           <b> smoker :  <select name="smoker">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+            </select> <br><br>
+           <b> region : <select name="region"> <br><br>
+            <option value="northeast">northeast</option>
+            <option value="northwest">northwest</option>
+            <option value="southeast">southeast</option>
+            <option value="southwest">southwest</option>
+            </select> <br><br>
+            <input type="submit" , value='predict!' >
+
+            <h1>Predicted medical insurance charges are : {{data}}</h1>  
+
+        </form>
+
+        
+        
+    </center>
+
+    </body>
+</html>
+
